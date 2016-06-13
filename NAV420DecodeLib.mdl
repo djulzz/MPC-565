@@ -1,0 +1,3604 @@
+Library {
+  Name			  "NAV420DecodeLib"
+  Version		  7.3
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  Created		  "Wed Sep 30 12:49:56 2009"
+  Creator		  "djulzz"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "djulzz"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Oct 02 08:45:53 2009"
+  RTWModifiedTimeStamp	  176373951
+  ModelVersionFormat	  "1.%<AutoIncrement:32>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.6.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 280, 135, 1160, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+      TagVisibility	      "local"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      DimensionsMode	      "auto"
+    }
+    Block {
+      BlockType		      Selector
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      InputPortWidth	      "-1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "NAV420DecodeLib"
+    Location		    [281, 247, 1224, 624]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Nav420 - Decode 'A'"
+      Ports		      [1, 6]
+      Position		      [20, 17, 265, 158]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Nav420 - Decode 'A'"
+	Location		[69, 318, 788, 780]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "raw_A_packet_in"
+	  Position		  [50, 33, 80, 47]
+	  IconDisplay		  "Port number"
+	  DataType		  "uint8"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "uint8"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [340, 40, 390, 60]
+	  ShowName		  off
+	  Value			  "180.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [340, 62, 390, 78]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [340, 116, 370, 134]
+	  ShowName		  off
+	  Value			  "630.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  Position		  [340, 136, 395, 154]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  Position		  [340, 191, 370, 209]
+	  ShowName		  off
+	  Value			  "10.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  Position		  [340, 212, 395, 228]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant6"
+	  Position		  [340, 261, 370, 279]
+	  ShowName		  off
+	  Value			  "1.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant7"
+	  Position		  [340, 282, 390, 298]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant8"
+	  Position		  [340, 336, 370, 354]
+	  ShowName		  off
+	  Value			  "100.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant9"
+	  Position		  [340, 357, 390, 373]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From"
+	  Position		  [25, 82, 65, 98]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  Position		  [25, 117, 65, 133]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From10"
+	  Position		  [340, 317, 395, 333]
+	  ShowName		  off
+	  GotoTag		  "PRE_05"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From11"
+	  Position		  [340, 407, 395, 423]
+	  ShowName		  off
+	  GotoTag		  "PRE_06"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From2"
+	  Position		  [25, 152, 65, 168]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From3"
+	  Position		  [25, 187, 65, 203]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From4"
+	  Position		  [25, 222, 65, 238]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From5"
+	  Position		  [25, 252, 65, 268]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From6"
+	  Position		  [340, 22, 395, 38]
+	  ShowName		  off
+	  GotoTag		  "PRE_01"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From7"
+	  Position		  [340, 97, 395, 113]
+	  ShowName		  off
+	  GotoTag		  "PRE_02"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From8"
+	  Position		  [340, 172, 395, 188]
+	  ShowName		  off
+	  GotoTag		  "PRE_03"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From9"
+	  Position		  [340, 242, 395, 258]
+	  ShowName		  off
+	  GotoTag		  "PRE_04"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto"
+	  Position		  [115, 32, 165, 48]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [250, 82, 305, 98]
+	  ShowName		  off
+	  GotoTag		  "PRE_01"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  Position		  [250, 117, 305, 133]
+	  ShowName		  off
+	  GotoTag		  "PRE_02"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  Position		  [250, 152, 305, 168]
+	  ShowName		  off
+	  GotoTag		  "PRE_03"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto4"
+	  Position		  [250, 187, 305, 203]
+	  ShowName		  off
+	  GotoTag		  "PRE_04"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto5"
+	  Position		  [250, 222, 305, 238]
+	  ShowName		  off
+	  GotoTag		  "PRE_05"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto6"
+	  Position		  [250, 252, 305, 268]
+	  ShowName		  off
+	  GotoTag		  "PRE_06"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  Ports			  [1, 1]
+	  Position		  [150, 251, 225, 269]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  Ports			  [1, 1]
+	  Position		  [150, 221, 225, 239]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  Ports			  [1, 1]
+	  Position		  [150, 185, 225, 205]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  Ports			  [1, 1]
+	  Position		  [150, 150, 225, 170]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  Ports			  [1, 1]
+	  Position		  [150, 115, 225, 135]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles3"
+	  Ports			  [1, 1]
+	  Position		  [150, 80, 225, 100]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  Ports			  [3, 1]
+	  Position		  [415, 18, 525, 82]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  Ports			  [3, 1]
+	  Position		  [415, 93, 525, 157]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  Ports			  [3, 1]
+	  Position		  [415, 168, 525, 232]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  Ports			  [3, 1]
+	  Position		  [415, 238, 525, 302]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  Ports			  [3, 1]
+	  Position		  [415, 313, 525, 377]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  Ports			  [1, 1]
+	  Position		  [85, 83, 125, 97]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[4 5 6 7 8 9]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  Ports			  [1, 1]
+	  Position		  [85, 117, 125, 133]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[10 11 12 13 14 15]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  Ports			  [1, 1]
+	  Position		  [85, 153, 125, 167]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[16 17 18 19 20 21]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  Ports			  [1, 1]
+	  Position		  [85, 187, 125, 203]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[22 23 24 25 26 27]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector4"
+	  Ports			  [1, 1]
+	  Position		  [85, 222, 125, 238]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[28 29]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector5"
+	  Ports			  [1, 1]
+	  Position		  [85, 252, 125, 268]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[30 31]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Euler Angles (deg)"
+	  Position		  [625, 43, 655, 57]
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Angular Rates (deg/sec)"
+	  Position		  [625, 118, 655, 132]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Accelerations (Gs)"
+	  Position		  [625, 193, 655, 207]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Mag Fields (Gauss)"
+	  Position		  [625, 263, 655, 277]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Temp (Celcius)"
+	  Position		  [625, 338, 655, 352]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "GPS ITOW"
+	  Position		  [625, 408, 655, 422]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  DataType		  "uint16"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "uint16"
+	  SignalType		  "real"
+	}
+	Line {
+	  SrcBlock		  "raw_A_packet_in"
+	  SrcPort		  1
+	  DstBlock		  "Goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From"
+	  SrcPort		  1
+	  DstBlock		  "Selector"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  DstBlock		  "Selector1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From2"
+	  SrcPort		  1
+	  DstBlock		  "Selector2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From3"
+	  SrcPort		  1
+	  DstBlock		  "Selector3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From4"
+	  SrcPort		  1
+	  DstBlock		  "Selector4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From5"
+	  SrcPort		  1
+	  DstBlock		  "Selector5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector5"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector4"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles3"
+	  SrcPort		  1
+	  DstBlock		  "Goto1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  SrcPort		  1
+	  DstBlock		  "Goto2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  SrcPort		  1
+	  DstBlock		  "Goto3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SrcPort		  1
+	  DstBlock		  "Goto4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  SrcPort		  1
+	  DstBlock		  "Goto5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SrcPort		  1
+	  DstBlock		  "Goto6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From6"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "From7"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From8"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From9"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant7"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant6"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SrcPort		  1
+	  DstBlock		  "Euler Angles (deg)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  SrcPort		  1
+	  DstBlock		  "Angular Rates (deg/sec)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  SrcPort		  1
+	  DstBlock		  "Accelerations (Gs)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  SrcPort		  1
+	  DstBlock		  "Mag Fields (Gauss)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant9"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant8"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From10"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  SrcPort		  1
+	  DstBlock		  "Temp (Celcius)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From11"
+	  SrcPort		  1
+	  DstBlock		  "GPS ITOW"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Nav420 - Decode 'N'"
+      Ports		      [1, 7]
+      Position		      [580, 19, 825, 161]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Nav420 - Decode 'N'"
+	Location		[327, 105, 1281, 810]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "raw_N_packet_in"
+	  Position		  [45, 38, 75, 52]
+	  IconDisplay		  "Port number"
+	  DataType		  "uint8"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "uint8"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  Position		  [420, 42, 460, 58]
+	  ShowName		  off
+	  Value			  "180.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [420, 62, 460, 78]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant10"
+	  Position		  [420, 538, 470, 552]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant11"
+	  Position		  [430, 517, 470, 533]
+	  ShowName		  off
+	  Value			  "8192.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [420, 137, 460, 153]
+	  ShowName		  off
+	  Value			  "630.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  Position		  [420, 157, 460, 173]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  Position		  [415, 237, 455, 253]
+	  ShowName		  off
+	  Value			  "256.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  Position		  [415, 257, 455, 273]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant6"
+	  Position		  [350, 348, 460, 362]
+	  ShowName		  off
+	  Value			  "2147483648.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant7"
+	  Position		  [420, 327, 460, 343]
+	  ShowName		  off
+	  Value			  "180.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant8"
+	  Position		  [365, 438, 475, 452]
+	  ShowName		  off
+	  Value			  "2147483648.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant9"
+	  Position		  [435, 417, 475, 433]
+	  ShowName		  off
+	  Value			  "180.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  Position		  [610, 594, 670, 606]
+	  ShowName		  off
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From"
+	  Position		  [40, 129, 80, 141]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  Position		  [40, 154, 80, 166]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From10"
+	  Position		  [305, 23, 355, 37]
+	  ShowName		  off
+	  GotoTag		  "EL01"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From11"
+	  Position		  [305, 118, 355, 132]
+	  ShowName		  off
+	  GotoTag		  "EL02"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From12"
+	  Position		  [300, 218, 350, 232]
+	  ShowName		  off
+	  GotoTag		  "EL03"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From13"
+	  Position		  [290, 308, 340, 322]
+	  ShowName		  off
+	  GotoTag		  "EL04"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From14"
+	  Position		  [290, 398, 340, 412]
+	  ShowName		  off
+	  GotoTag		  "EL05"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From15"
+	  Position		  [285, 498, 335, 512]
+	  ShowName		  off
+	  GotoTag		  "EL06"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From16"
+	  Position		  [415, 593, 465, 607]
+	  ShowName		  off
+	  GotoTag		  "EL07"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From17"
+	  Position		  [105, 433, 155, 447]
+	  ShowName		  off
+	  GotoTag		  "EL08"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From18"
+	  Position		  [50, 474, 155, 486]
+	  ShowName		  off
+	  GotoTag		  "given_checksum"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From2"
+	  Position		  [40, 179, 80, 191]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From3"
+	  Position		  [40, 204, 80, 216]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From4"
+	  Position		  [40, 368, 90, 382]
+	  ShowName		  off
+	  GotoTag		  "EL04_M"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From5"
+	  Position		  [40, 393, 90, 407]
+	  ShowName		  off
+	  GotoTag		  "EL04_M"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From6"
+	  Position		  [40, 249, 80, 261]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From7"
+	  Position		  [40, 279, 80, 291]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From8"
+	  Position		  [40, 309, 80, 321]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From9"
+	  Position		  [40, 339, 80, 351]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto"
+	  Position		  [115, 39, 160, 51]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [160, 204, 205, 216]
+	  ShowName		  off
+	  GotoTag		  "EL04_M"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto10"
+	  Position		  [160, 339, 265, 351]
+	  ShowName		  off
+	  GotoTag		  "given_checksum"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  Position		  [160, 129, 205, 141]
+	  ShowName		  off
+	  GotoTag		  "EL01"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  Position		  [160, 154, 205, 166]
+	  ShowName		  off
+	  GotoTag		  "EL02"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto4"
+	  Position		  [160, 179, 205, 191]
+	  ShowName		  off
+	  GotoTag		  "EL03"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto5"
+	  Position		  [185, 369, 230, 381]
+	  ShowName		  off
+	  GotoTag		  "EL04"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto6"
+	  Position		  [185, 394, 230, 406]
+	  ShowName		  off
+	  GotoTag		  "EL05"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto7"
+	  Position		  [160, 249, 205, 261]
+	  ShowName		  off
+	  GotoTag		  "EL06"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto8"
+	  Position		  [160, 279, 205, 291]
+	  ShowName		  off
+	  GotoTag		  "EL07"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto9"
+	  Position		  [160, 309, 205, 321]
+	  ShowName		  off
+	  GotoTag		  "EL08"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  Ports			  [1, 1]
+	  Position		  [370, 498, 470, 512]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  Ports			  [1, 1]
+	  Position		  [500, 593, 600, 607]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 4 bytes to\n1 double"
+	  Ports			  [1, 1]
+	  Position		  [370, 307, 475, 323]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 4 bytes to\n1 double"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 4 bytes to\n1 double1"
+	  Ports			  [1, 1]
+	  Position		  [370, 397, 475, 413]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 4 bytes to\n1 double"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  Ports			  [1, 1]
+	  Position		  [385, 23, 460, 37]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  Ports			  [1, 1]
+	  Position		  [385, 118, 460, 132]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  Ports			  [1, 1]
+	  Position		  [380, 218, 455, 232]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  Ports			  [3, 1]
+	  Position		  [495, 18, 605, 82]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  Ports			  [3, 1]
+	  Position		  [495, 113, 605, 177]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  Ports			  [3, 1]
+	  Position		  [495, 213, 605, 277]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  Ports			  [3, 1]
+	  Position		  [495, 303, 605, 367]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  Ports			  [3, 1]
+	  Position		  [495, 393, 605, 457]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  Ports			  [3, 1]
+	  Position		  [495, 493, 605, 557]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  Ports			  [1, 1]
+	  Position		  [90, 129, 140, 141]
+	  ShowName		  off
+	  InputPortWidth	  "37"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[4 5 6 7 8 9]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  Ports			  [1, 1]
+	  Position		  [90, 154, 140, 166]
+	  ShowName		  off
+	  InputPortWidth	  "37"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[10 11 12 13 14 15]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  Ports			  [1, 1]
+	  Position		  [90, 179, 140, 191]
+	  ShowName		  off
+	  InputPortWidth	  "37"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[16 17 18 19 20 21]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  Ports			  [1, 1]
+	  Position		  [90, 204, 140, 216]
+	  ShowName		  off
+	  InputPortWidth	  "37"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[22 23 24 25 26 27 28 29]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector4"
+	  Ports			  [1, 1]
+	  Position		  [105, 369, 155, 381]
+	  ShowName		  off
+	  InputPortWidth	  "8"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[1 2 3 4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector5"
+	  Ports			  [1, 1]
+	  Position		  [105, 394, 155, 406]
+	  ShowName		  off
+	  InputPortWidth	  "8"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[5 6 7 8]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector6"
+	  Ports			  [1, 1]
+	  Position		  [90, 249, 140, 261]
+	  ShowName		  off
+	  InputPortWidth	  "37"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[30 31]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector7"
+	  Ports			  [1, 1]
+	  Position		  [90, 279, 140, 291]
+	  ShowName		  off
+	  InputPortWidth	  "37"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[32 33]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector8"
+	  Ports			  [1, 1]
+	  Position		  [90, 309, 140, 321]
+	  ShowName		  off
+	  InputPortWidth	  "37"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[34 35]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector9"
+	  Ports			  [1, 1]
+	  Position		  [90, 339, 140, 351]
+	  ShowName		  off
+	  InputPortWidth	  "37"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[36 37]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [180, 433, 205, 447]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  Position		  [180, 473, 205, 487]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Euler Angles (deg)"
+	  Position		  [690, 43, 720, 57]
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Rates (deg/s)"
+	  Position		  [690, 138, 720, 152]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Velocities (m/s)"
+	  Position		  [690, 238, 720, 252]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Latitude (deg)"
+	  Position		  [690, 328, 720, 342]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Longitude (deg)"
+	  Position		  [690, 418, 720, 432]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Altitude (m)"
+	  Position		  [690, 518, 720, 532]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "GPS ITOW [0 - 65636] ms"
+	  Position		  [690, 593, 720, 607]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Line {
+	  SrcBlock		  "raw_N_packet_in"
+	  SrcPort		  1
+	  DstBlock		  "Goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "Goto1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From4"
+	  SrcPort		  1
+	  DstBlock		  "Selector4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From5"
+	  SrcPort		  1
+	  DstBlock		  "Selector5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector4"
+	  SrcPort		  1
+	  DstBlock		  "Goto5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector5"
+	  SrcPort		  1
+	  DstBlock		  "Goto6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From"
+	  SrcPort		  1
+	  DstBlock		  "Selector"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  DstBlock		  "Selector1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From2"
+	  SrcPort		  1
+	  DstBlock		  "Selector2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From3"
+	  SrcPort		  1
+	  DstBlock		  "Selector3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "Goto2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "Goto3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "Goto4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector6"
+	  SrcPort		  1
+	  DstBlock		  "Goto7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From6"
+	  SrcPort		  1
+	  DstBlock		  "Selector6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector7"
+	  SrcPort		  1
+	  DstBlock		  "Goto8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From7"
+	  SrcPort		  1
+	  DstBlock		  "Selector7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector8"
+	  SrcPort		  1
+	  DstBlock		  "Goto9"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From8"
+	  SrcPort		  1
+	  DstBlock		  "Selector8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector9"
+	  SrcPort		  1
+	  DstBlock		  "Goto10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From9"
+	  SrcPort		  1
+	  DstBlock		  "Selector9"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From17"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From18"
+	  SrcPort		  1
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From10"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From11"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From12"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From13"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 4 bytes to\n1 double"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From14"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 4 bytes to\n1 double1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From15"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From16"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SrcPort		  1
+	  DstBlock		  "Euler Angles (deg)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients1"
+	  SrcPort		  1
+	  DstBlock		  "Rates (deg/s)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  SrcPort		  1
+	  DstBlock		  "Velocities (m/s)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 4 bytes to\n1 double"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant6"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant7"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  SrcPort		  1
+	  DstBlock		  "Latitude (deg)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  SrcPort		  1
+	  DstBlock		  "Longitude (deg)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 4 bytes to\n1 double1"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant9"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant8"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  SrcPort		  1
+	  DstBlock		  "Altitude (m)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant11"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant10"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  DstBlock		  "GPS ITOW [0 - 65636] ms"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Nav420 - Decode 'S'"
+      Ports		      [1, 6]
+      Position		      [300, 17, 550, 158]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"Nav420 - Decode 'S'"
+	Location		[80, 299, 993, 833]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "raw_A_packet_in"
+	  Position		  [45, 23, 75, 37]
+	  IconDisplay		  "Port number"
+	  DataType		  "uint8"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "uint8"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [135, 272, 185, 288]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant10"
+	  Position		  [440, 356, 470, 374]
+	  ShowName		  off
+	  Value			  "100.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [140, 382, 190, 398]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  Position		  [140, 487, 190, 503]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  Position		  [430, 277, 480, 293]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  Position		  [430, 387, 480, 403]
+	  ShowName		  off
+	  Value			  "32768.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant6"
+	  Position		  [145, 241, 175, 259]
+	  ShowName		  off
+	  Value			  "10.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant7"
+	  Position		  [140, 351, 170, 369]
+	  ShowName		  off
+	  Value			  "630.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant8"
+	  Position		  [135, 456, 165, 474]
+	  ShowName		  off
+	  Value			  "1.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant9"
+	  Position		  [435, 246, 465, 264]
+	  ShowName		  off
+	  Value			  "100.0"
+	  OutDataTypeMode	  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From"
+	  Position		  [70, 67, 110, 83]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  Position		  [70, 87, 110, 103]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From10"
+	  Position		  [425, 327, 480, 343]
+	  ShowName		  off
+	  GotoTag		  "PRE_05"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From11"
+	  Position		  [445, 457, 500, 473]
+	  ShowName		  off
+	  GotoTag		  "PRE_06"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From2"
+	  Position		  [70, 107, 110, 123]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From3"
+	  Position		  [70, 127, 110, 143]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From4"
+	  Position		  [70, 147, 110, 163]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From5"
+	  Position		  [70, 167, 110, 183]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From6"
+	  Position		  [140, 212, 195, 228]
+	  ShowName		  off
+	  GotoTag		  "PRE_01"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From7"
+	  Position		  [135, 322, 190, 338]
+	  ShowName		  off
+	  GotoTag		  "PRE_02"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From8"
+	  Position		  [135, 427, 190, 443]
+	  ShowName		  off
+	  GotoTag		  "PRE_03"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From9"
+	  Position		  [425, 217, 480, 233]
+	  ShowName		  off
+	  GotoTag		  "PRE_04"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto"
+	  Position		  [110, 22, 145, 38]
+	  ShowName		  off
+	  GotoTag		  "SRC"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [295, 67, 350, 83]
+	  ShowName		  off
+	  GotoTag		  "PRE_01"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  Position		  [295, 87, 350, 103]
+	  ShowName		  off
+	  GotoTag		  "PRE_02"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto3"
+	  Position		  [295, 107, 350, 123]
+	  ShowName		  off
+	  GotoTag		  "PRE_03"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto4"
+	  Position		  [295, 127, 350, 143]
+	  ShowName		  off
+	  GotoTag		  "PRE_04"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto5"
+	  Position		  [295, 147, 350, 163]
+	  ShowName		  off
+	  GotoTag		  "PRE_05"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto6"
+	  Position		  [295, 167, 350, 183]
+	  ShowName		  off
+	  GotoTag		  "PRE_06"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  Ports			  [1, 1]
+	  Position		  [200, 148, 265, 162]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  Ports			  [1, 1]
+	  Position		  [200, 168, 265, 182]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  Ports			  [1, 1]
+	  Position		  [200, 67, 265, 83]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  Ports			  [1, 1]
+	  Position		  [200, 87, 265, 103]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  Ports			  [1, 1]
+	  Position		  [200, 107, 265, 123]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles3"
+	  Ports			  [1, 1]
+	  Position		  [200, 127, 265, 143]
+	  BackgroundColor	  "green"
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  Ports			  [3, 1]
+	  Position		  [215, 203, 325, 297]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  Ports			  [3, 1]
+	  Position		  [215, 313, 325, 407]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  Ports			  [3, 1]
+	  Position		  [215, 418, 325, 512]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  Ports			  [3, 1]
+	  Position		  [505, 208, 615, 302]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  Ports			  [3, 1]
+	  Position		  [505, 318, 615, 412]
+	  ShowName		  off
+	  SourceBlock		  "NAV420DecodeLib_LowLevel/NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  Ports			  [1, 1]
+	  Position		  [135, 68, 175, 82]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[4 5 6 7 8 9]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  Ports			  [1, 1]
+	  Position		  [135, 87, 175, 103]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[10 11 12 13 14 15]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  Ports			  [1, 1]
+	  Position		  [135, 108, 175, 122]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[16 17 18 19 20 21]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  Ports			  [1, 1]
+	  Position		  [135, 127, 175, 143]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[22 23 24 25 26 27]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector4"
+	  Ports			  [1, 1]
+	  Position		  [135, 147, 175, 163]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[28 29]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector5"
+	  Ports			  [1, 1]
+	  Position		  [135, 167, 175, 183]
+	  ShowName		  off
+	  InputPortWidth	  "35"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[30 31]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Accel. (Gs)"
+	  Position		  [365, 243, 395, 257]
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Rates. (deg/s)"
+	  Position		  [365, 353, 395, 367]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Mag. Fields (Gauss)"
+	  Position		  [365, 458, 395, 472]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Axis Temps. (Celcius)"
+	  Position		  [665, 248, 695, 262]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Board Temp. (Celcius)"
+	  Position		  [665, 358, 695, 372]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  DataType		  "double"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "double"
+	  SignalType		  "real"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "GPS ITOW"
+	  Position		  [665, 458, 695, 472]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  DataType		  "uint16"
+	  OutDataType		  "fixdt(1, 16)"
+	  OutScaling		  "2^0"
+	  OutDataTypeStr	  "uint16"
+	  SignalType		  "real"
+	}
+	Line {
+	  SrcBlock		  "raw_A_packet_in"
+	  SrcPort		  1
+	  DstBlock		  "Goto"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From3"
+	  SrcPort		  1
+	  DstBlock		  "Selector3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From2"
+	  SrcPort		  1
+	  DstBlock		  "Selector2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  DstBlock		  "Selector1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From"
+	  SrcPort		  1
+	  DstBlock		  "Selector"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From4"
+	  SrcPort		  1
+	  DstBlock		  "Selector4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector4"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From5"
+	  SrcPort		  1
+	  DstBlock		  "Selector5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector5"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles"
+	  SrcPort		  1
+	  DstBlock		  "Goto1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles1"
+	  SrcPort		  1
+	  DstBlock		  "Goto2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles2"
+	  SrcPort		  1
+	  DstBlock		  "Goto3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 6 bytes to\n3 doubles3"
+	  SrcPort		  1
+	  DstBlock		  "Goto4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double"
+	  SrcPort		  1
+	  DstBlock		  "Goto5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - 2 bytes to\n1 double1"
+	  SrcPort		  1
+	  DstBlock		  "Goto6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From6"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From7"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From8"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From9"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From10"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant6"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant7"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant8"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients"
+	  SrcPort		  1
+	  DstBlock		  "Accel. (Gs)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients2"
+	  SrcPort		  1
+	  DstBlock		  "Rates. (deg/s)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients3"
+	  SrcPort		  1
+	  DstBlock		  "Mag. Fields (Gauss)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant9"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant10"
+	  SrcPort		  1
+	  DstBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From11"
+	  SrcPort		  1
+	  DstBlock		  "GPS ITOW"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients4"
+	  SrcPort		  1
+	  DstBlock		  "Axis Temps. (Celcius)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "NAV420 - Decode - \nLow Level - Apply Coefficients5"
+	  SrcPort		  1
+	  DstBlock		  "Board Temp. (Celcius)"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}

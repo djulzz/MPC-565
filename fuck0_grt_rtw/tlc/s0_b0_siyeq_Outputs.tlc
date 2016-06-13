@@ -1,0 +1,8 @@
+%implements s0_b0_siyeq_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign tlcOutputsFcnOfS0B0 = OpaqueTLCBlockFcn("Outputs", 0, 0)
+%assign tlcOutputsFcnOfS0B2 = OpaqueTLCBlockFcn("Outputs", 0, 2)
+%<tlcOutputsFcnOfS0B0>\
+%<tlcOutputsFcnOfS0B2>\
+%endfunction

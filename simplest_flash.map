@@ -1,0 +1,377 @@
+Link map of __start
+
+
+.flash_entry section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000004 00010000 00000280  1 .flash_entry 	start.o 
+  00000000 000000 00010000 00000280    flash_entry (entry of .flash_entry) 	start.o 
+
+
+.text section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000050 00010004 00000284  1 .text 	__ppc_eabi_init.o 
+  00000000 00000c 00010004 00000284  4 __init_user 	__ppc_eabi_init.o 
+  0000002c 000020 00010030 000002b0  4 exit 	__ppc_eabi_init.o 
+  0000004c 000004 00010050 000002d0  4 _ExitProcess 	__ppc_eabi_init.o 
+  00000050 000004 00010054 000002d4  1 .text 	exceptions.o 
+  00000054 000004 00010058 000002d8  1 .text 	dec_handler.o 
+  00000054 000000 00010058 000002d8    decrementer_isr (entry of .text) 	dec_handler.o 
+  00000058 000038 0001005c 000002dc  1 .text 	copyappbios.o 
+  00000058 000038 0001005c 000002dc  4 copyappbios 	copyappbios.o 
+  00000090 0001ec 00010094 00000314  1 .text 	mpc555_main.o 
+  00000090 0000e0 00010094 00000314  4 rt_OneStep 	mpc555_main.o 
+  00000170 00010c 00010174 000003f4  4 main 	mpc555_main.o 
+  0000027c 000204 00010280 00000500  1 .text 	simplest.o 
+  0000027c 0000e0 00010280 00000500  4 simplest_step 	simplest.o 
+  0000035c 000124 00010360 000005e0  4 simplest_initialize 	simplest.o 
+  00000480 0004b0 00010484 00000704  1 .text 	lib_drivers.565.a isr.o
+  00000480 00004c 00010484 00000704  4 loadfpctxt 	lib_drivers.565.a isr.o
+  000004cc 000060 000104d0 00000750  4 savefpctxt 	lib_drivers.565.a isr.o
+  0000052c 0000a0 00010530 000007b0  4 initIrqModule 	lib_drivers.565.a isr.o
+  000005cc 000178 000105d0 00000850  4 registerIRQ_Handler 	lib_drivers.565.a isr.o
+  00000744 000004 00010748 000009c8  4 NOP_IRQ 	lib_drivers.565.a isr.o
+  00000748 00014c 0001074c 000009cc  4 external_interrupt_isr 	lib_drivers.565.a isr.o
+  00000894 00009c 00010898 00000b18  4 LEV7_IRQ 	lib_drivers.565.a isr.o
+  00000930 000104 00010934 00000bb4  1 .text 	lib_drivers.565.a pit.o
+  00000930 000028 00010934 00000bb4  4 setPitModuleIrqLevel 	lib_drivers.565.a pit.o
+  00000958 0000dc 0001095c 00000bdc  4 setPitPeriod 	lib_drivers.565.a pit.o
+  00000a34 000108 00010a38 00000cb8  1 .text 	lib_drivers.565.a qsmcm_sci.o
+  00000a34 000098 00010a38 00000cb8  4 qsmcm_sci1_init 	lib_drivers.565.a qsmcm_sci.o
+  00000acc 00001c 00010ad0 00000d50  4 qsmcm_sci2_init 	lib_drivers.565.a qsmcm_sci.o
+  00000ae8 000054 00010aec 00000d6c  4 general_send_string_sci2 	lib_drivers.565.a qsmcm_sci.o
+
+
+.rodata section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000011 00010b40 00000dc0  1 .rodata 	simplest_data.o 
+  00000000 000011 00010b40 00000dc0  4 simplest_ConstP 	simplest_data.o 
+
+
+.application_bios section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000078 00010b60 00000de0  1 .application_bios 	exceptions.o 
+  00000000 000000 00010b60 00000de0    reserved0x0 (entry of .application_bios) 	exceptions.o 
+  00000004 000000 00010b64 00000de4    application_reset (entry of .application_bios) 	exceptions.o 
+  00000008 000000 00010b68 00000de8    machine_check_exception (entry of .application_bios) 	exceptions.o 
+  0000000c 000000 00010b6c 00000dec    data_access_exception (entry of .application_bios) 	exceptions.o 
+  00000010 000000 00010b70 00000df0    instruct_access_exception (entry of .application_bios) 	exceptions.o 
+  00000014 000000 00010b74 00000df4    external_interrupt_exception (entry of .application_bios) 	exceptions.o 
+  00000018 000000 00010b78 00000df8    alignment_exception (entry of .application_bios) 	exceptions.o 
+  0000001c 000000 00010b7c 00000dfc    program_exception (entry of .application_bios) 	exceptions.o 
+  00000020 000000 00010b80 00000e00    fp_unavailable_exception (entry of .application_bios) 	exceptions.o 
+  00000024 000000 00010b84 00000e04    decrementer_exception (entry of .application_bios) 	exceptions.o 
+  00000028 000000 00010b88 00000e08    reserved0x50 (entry of .application_bios) 	exceptions.o 
+  0000002c 000000 00010b8c 00000e0c    reserved0x58 (entry of .application_bios) 	exceptions.o 
+  00000030 000000 00010b90 00000e10    system_call_exception (entry of .application_bios) 	exceptions.o 
+  00000034 000000 00010b94 00000e14    trace_exception (entry of .application_bios) 	exceptions.o 
+  00000038 000000 00010b98 00000e18    fp_assist_exception (entry of .application_bios) 	exceptions.o 
+  0000003c 000000 00010b9c 00000e1c    software_emulation_exception (entry of .application_bios) 	exceptions.o 
+  00000040 000000 00010ba0 00000e20    reserved0x80 (entry of .application_bios) 	exceptions.o 
+  00000044 000000 00010ba4 00000e24    reserved0x88 (entry of .application_bios) 	exceptions.o 
+  00000048 000000 00010ba8 00000e28    reserved0x90 (entry of .application_bios) 	exceptions.o 
+  0000004c 000000 00010bac 00000e2c    instruction_protection_exception (entry of .application_bios) 	exceptions.o 
+  00000050 000000 00010bb0 00000e30    data_protection_exception (entry of .application_bios) 	exceptions.o 
+  00000054 000000 00010bb4 00000e34    reserved0xA8 (entry of .application_bios) 	exceptions.o 
+  00000058 000000 00010bb8 00000e38    reserved0xB0 (entry of .application_bios) 	exceptions.o 
+  0000005c 000000 00010bbc 00000e3c    reserved0xC8 (entry of .application_bios) 	exceptions.o 
+  00000060 000000 00010bc0 00000e40    reserved0xD0 (entry of .application_bios) 	exceptions.o 
+  00000064 000000 00010bc4 00000e44    reserved0xD8 (entry of .application_bios) 	exceptions.o 
+  00000068 000000 00010bc8 00000e48    data_breakpoint (entry of .application_bios) 	exceptions.o 
+  0000006c 000000 00010bcc 00000e4c    instruct_breakpoint (entry of .application_bios) 	exceptions.o 
+  00000070 000000 00010bd0 00000e50    maskable_external_breakpoint (entry of .application_bios) 	exceptions.o 
+  00000074 000000 00010bd4 00000e54    nonmaskable_external_breakpoint (entry of .application_bios) 	exceptions.o 
+
+
+.ctors section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+.dtors section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+.BINARY section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+extab section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+extabindex section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+.init section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000020 00010bd8 00000e58  1 .init 	__ppc_eabi_init.o 
+  00000000 00001c 00010bd8 00000e58  4 __init_hardware 	__ppc_eabi_init.o 
+  0000001c 000004 00010bf4 00000e74  4 __flush_cache 	__ppc_eabi_init.o 
+  00000020 000184 00010bf8 00000e78  1 .init 	Runtime.PPCEABI.H.a __start.o
+  00000020 000068 00010bf8 00000e78  4 __start 	Runtime.PPCEABI.H.a __start.o
+  00000088 000054 00010c60 00000ee0  4 __copy_rom_section 	Runtime.PPCEABI.H.a __start.o
+  000000dc 000018 00010cb4 00000f34  4 __init_bss_section 	Runtime.PPCEABI.H.a __start.o
+  000000f4 00001c 00010ccc 00000f4c  4 __init_registers 	Runtime.PPCEABI.H.a __start.o
+  00000110 000094 00010ce8 00000f68  4 __init_data 	Runtime.PPCEABI.H.a __start.o
+  000001a4 000134 00010d7c 00000ffc  1 .init 	Runtime.PPCEABI.H.a __mem.o
+  000001a4 000050 00010d7c 00000ffc  4 memcpy 	Runtime.PPCEABI.H.a __mem.o
+  000001f4 0000b4 00010dcc 0000104c  4 __fill_mem 	Runtime.PPCEABI.H.a __mem.o
+  000002a8 000030 00010e80 00001100  4 memset 	Runtime.PPCEABI.H.a __mem.o
+  000002d8 000084 00010eb0 00001130  1 .init 	Linker Generated Symbol File 
+  000002d8 00006c 00010eb0 00001130  4 _rom_copy_info 	Linker Generated Symbol File 
+  00000344 000018 00010f1c 0000119c  4 _bss_init_info 	Linker Generated Symbol File 
+
+
+.usr_init section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000024 00010f40 000011c0  1 .usr_init 	internal_flash_init.o 
+  00000000 000000 00010f40 000011c0    usr_init (entry of .usr_init) 	internal_flash_init.o 
+
+
+.fini section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+.data section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+.sdata section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000008 003f7078 000011e8  1 .sdata 	mpc555_main.o 
+  00000000 000008 003f7078 000011e8  8 @83 	mpc555_main.o 
+  00000008 000004 003f7080 000011f0  1 .sdata 	simplest.o 
+  00000008 000004 003f7080 000011f0  4 simplest_M 	simplest.o 
+
+
+.sbss section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000004 003f7088 000011f8  1 .sbss 	mpc555_main.o 
+  00000000 000004 003f7088 000011f8  4 OverrunFlags 	mpc555_main.o 
+  00000004 000004 003f7090 00001200  8 *fill*
+  00000008 000004 003f7090 00001200  1 .sbss 	simplest.o 
+  00000008 000004 003f7090 00001200  4 simplest_M_ 	simplest.o 
+  0000000c 000004 003f7098 00001208  8 *fill*
+  00000010 00000c 003f7098 00001208  1 .sbss 	lib_drivers.565.a isr.o
+  00000010 000004 003f7098 00001208  4 IRQ_ENABLE_COUNT_SEMAPHORE 	lib_drivers.565.a isr.o
+  00000014 000004 003f709c 0000120c  4 IRQ2_FLOAT_FLAG 	lib_drivers.565.a isr.o
+  00000018 000004 003f70a0 00001210  4 IRQ1_FLOAT_FLAG 	lib_drivers.565.a isr.o
+  0000001c 000004 003f70a8 00001218  8 *fill*
+  00000020 000002 003f70a8 00001218  1 .sbss 	lib_drivers.565.a qsmcm_sci.o
+  00000020 000001 003f70a8 00001218  1 sci1_rx_next 	lib_drivers.565.a qsmcm_sci.o
+  00000021 000001 003f70a9 00001219  1 mpc555_qsmcm_sci_flags 	lib_drivers.565.a qsmcm_sci.o
+
+
+.sdata2 section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000008 003f70b0 000011f8  1 .sdata2 	mpc555_main.o 
+  00000000 000004 003f70b0 000011f8  4 @104 	mpc555_main.o 
+  00000004 000004 003f70b4 000011fc  4 @105 	mpc555_main.o 
+  00000008 000020 003f70b8 00001200  1 .sdata2 	lib_drivers.565.a pit.o
+  00000008 000008 003f70b8 00001200  8 @58 	lib_drivers.565.a pit.o
+  00000010 000008 003f70c0 00001208  8 @59 	lib_drivers.565.a pit.o
+  00000018 000004 003f70c8 00001210  4 @60 	lib_drivers.565.a pit.o
+  00000020 000008 003f70d0 00001218  8 @63 	lib_drivers.565.a pit.o
+
+
+.sbss2 section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+.bss section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+  00000000 000050 003f70d8 00001220  1 .bss 	simplest.o 
+  00000000 000050 003f70d8 00001220  8 simplest_DWork 	simplest.o 
+  00000050 000164 003f7128 00001270  1 .bss 	lib_drivers.565.a isr.o
+  00000050 000000 003f7128 00001270    ...bss.0 (entry of .bss) 	lib_drivers.565.a isr.o
+  00000050 0000a0 003f7128 00001270  8 IRQ_LEVEL_OBJECTS 	lib_drivers.565.a isr.o
+  000000f0 000040 003f71c8 00001310  8 IRQ1_JUMP_TABLE 	lib_drivers.565.a isr.o
+  00000130 000084 003f7208 00001350  4 IRQ2_JUMP_TABLE 	lib_drivers.565.a isr.o
+
+
+.PPC.EMB.sdata0 section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+.PPC.EMB.sbss0 section layout
+  Starting        Virtual  File
+  address  Size   address  offset
+  ---------------------------------
+
+
+Memory map:
+                   Starting Size     File     ROM      RAM Buffer
+                   address           Offset   Address  Address
+     .flash_entry  00010000 00000004 00000280 00010000 00010000
+            .text  00010004 00000b3c 00000284 00010004 00010004
+          .rodata  00010b40 00000014 00000dc0 00010b40 00010b40
+  .application_bios  00010b60 00000078 00000de0 00010b60 00010b60
+           .ctors  00010bd8 00000000 00000e58 00010bd8 00010bd8
+           .dtors  00010bd8 00000000 00000e58 00010bd8 00010bd8
+          .BINARY  00010bd8 00000000 00000e58 00010bd8 00010bd8
+            extab  00010bd8 00000000 00000e58 00010bd8 00010bd8
+       extabindex  00010bd8 00000000 00000e58 00010bd8 00010bd8
+            .init  00010bd8 0000035c 00000e58 00010bd8 00010bd8
+        .usr_init  00010f40 00000024 000011c0 00010f40 00010f40
+            .data  003f7078 00000000 000011e8 00010fdc 00010fdc
+           .sdata  003f7078 0000000c 000011e8 00010fe0 00010fe0
+            .sbss  003f7088 00000024 000011f8 00010ff0 00010ff0
+          .sdata2  003f70b0 00000028 000011f8 00010ff0 00010ff0
+           .sbss2  003f70d8 00000000 00001220 00011018 00011018
+             .bss  003f70d8 000001b4 00001220 00011018 00011018
+  .PPC.EMB.sdata0  003f728c 00000000 00001220 00011018 00011018
+   .PPC.EMB.sbss0  003f728c 00000000 00001220 00011018 00011018
+  .PPC.EMB.apuinfo  00001910 00000000 00002b30 00012928 00012928
+
+
+Linker generated symbols:
+_application_exception_table_target_base 003f7000
+             _bootrom_org 00000000
+             _bootrom_len 00010000
+               _flash_org 00000000
+               _flash_len 00100000
+                 _ram_org 003f7000
+                 _ram_len 00009000
+               _e_ram_org 00800000
+               _e_ram_len 00040000
+_application_exception_table_text_base 00010b60
+_application_exception_table_size 00000078
+                   _finit 00010bd8
+               _finit_rom 00010bd8
+               _init_size 0000035c
+                   _ftext 00010004
+               _ftext_rom 00010004
+               _text_size 00000b3c
+                  _frdata 00010b40
+              _frdata_rom 00010b40
+              _rdata_size 00000014
+              _extab_size 00000000
+                    _feti 00010bd8
+                _feti_rom 00010bd8
+                _eti_size 00000000
+                   _fdata 003f7078
+               _fdata_rom 00010fdc
+               _data_size 00000000
+                  _fsdata 003f7078
+              _fsdata_rom 00010fe0
+              _sdata_size 0000000c
+                   _fsbss 003f7088
+               _sbss_size 00000024
+                 _fsdata2 003f70b0
+             _fsdata2_rom 00010ff0
+             _sdata2_size 00000028
+                  _fsbss2 003f70d8
+              _sbss2_size 00000000
+                    _fbss 003f70d8
+                _bss_size 000001b4
+                 _fsdata0 003f728c
+             _fsdata0_rom 00011018
+             _sdata0_size 00000000
+                  _fsbss0 003f728c
+              _sbss0_size 00000000
+              _stack_size 00008d6c
+               _heap_size 00100000
+           _f_flash_entry 00010000
+       _f_flash_entry_rom 00010000
+           _e_flash_entry 00010004
+                  _f_text 00010004
+              _f_text_rom 00010004
+                  _e_text 00010b40
+                _f_rodata 00010b40
+            _f_rodata_rom 00010b40
+                _e_rodata 00010b54
+      _f_application_bios 00010b60
+  _f_application_bios_rom 00010b60
+      _e_application_bios 00010bd8
+                 _f_ctors 00010bd8
+             _f_ctors_rom 00010bd8
+                 _e_ctors 00010bd8
+                 _f_dtors 00010bd8
+             _f_dtors_rom 00010bd8
+                 _e_dtors 00010bd8
+                _f_BINARY 00010bd8
+            _f_BINARY_rom 00010bd8
+                _e_BINARY 00010bd8
+                  _fextab 00010bd8
+              _fextab_rom 00010bd8
+                  _eextab 00010bd8
+             _fextabindex 00010bd8
+         _fextabindex_rom 00010bd8
+             _eextabindex 00010bd8
+                  _f_init 00010bd8
+              _f_init_rom 00010bd8
+                  _e_init 00010f34
+              _f_usr_init 00010f40
+          _f_usr_init_rom 00010f40
+              _e_usr_init 00010f64
+                  _f_fini 00010f64
+              _f_fini_rom 00010f64
+                  _e_fini 00010f64
+                  _f_data 003f7078
+              _f_data_rom 00010fdc
+                  _e_data 003f7078
+                 _f_sdata 003f7078
+             _f_sdata_rom 00010fe0
+                 _e_sdata 003f7084
+                  _f_sbss 003f7088
+                  _e_sbss 003f70ac
+                _f_sdata2 003f70b0
+            _f_sdata2_rom 00010ff0
+                _e_sdata2 003f70d8
+                 _f_sbss2 003f70d8
+                 _e_sbss2 003f70d8
+                   _f_bss 003f70d8
+                   _e_bss 003f728c
+        _f_PPC_EMB_sdata0 003f728c
+    _f_PPC_EMB_sdata0_rom 00011018
+        _e_PPC_EMB_sdata0 003f728c
+         _f_PPC_EMB_sbss0 003f728c
+         _e_PPC_EMB_sbss0 003f728c
+              _stack_addr 003ffff8
+               _stack_end 003f728c
+               _heap_addr 002cfff0
+                _heap_end 003cfff0
+             _nbfunctions 0000001e
+           SIZEOF_HEADERS 00000280
+               _SDA_BASE_ 003ff078
+              _SDA2_BASE_ 003ff0b0
+           _ABS_SDA_BASE_ 003ff078
+          _ABS_SDA2_BASE_ 003ff0b0

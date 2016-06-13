@@ -1,0 +1,8 @@
+%implements s0_b0_siyeq_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign tlcTerminateFcnOfS0B0 = OpaqueTLCBlockFcn("Terminate", 0, 0)
+%assign tlcTerminateFcnOfS0B2 = OpaqueTLCBlockFcn("Terminate", 0, 2)
+%<tlcTerminateFcnOfS0B0>\
+%<tlcTerminateFcnOfS0B2>\
+%endfunction
